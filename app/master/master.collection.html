@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="card">
+    <div class="card"  *ngFor="let item of masterData">
 
-        <div class="card-block" *ngFor="let item of masterData">
+        <div class="card-block">
             <h4 class="card-title">{{item.title}}</h4>
             <p class="card-text">{{item.type}}</p>
-            <button class="btn btn-primary">Add To Cart</button>
+            <button (click)="addToCollection(item)" class="btn btn-primary">Add To Cart</button>
         </div>
     </div>
 

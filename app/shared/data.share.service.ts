@@ -11,7 +11,7 @@ class sharedService {
         var masterObject: MasterCollectionInfo;//= { title: "ATitle", type: "AType" };
 
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 5; i++) {
 
             masterObject = { title: "Atitle " + i, type: "AType " + i }
             this.masterCollection.push(masterObject);
@@ -21,6 +21,11 @@ class sharedService {
 
     }
 
+    setCollectionInfo(item: MasterCollectionInfo) {
+        if (this.collection.indexOf(item) == -1) {
+            this.collection.push(item);
+        }
+    }
 
     getMasterCollection(): Array<MasterCollectionInfo> {
         return this.masterCollection;
@@ -28,6 +33,11 @@ class sharedService {
     getCollectionInfo(): Array<CollectionInfo> {
         return this.collection;
     }
+    removeCollectableItems (item:MasterCollectionInfo){
+        var currentIndex= this.collection.indexOf(item);
+        this.collection.splice(currentIndex,1);
+    }
+
 }
 
 export { sharedService, MasterCollectionInfo, CollectionInfo } 

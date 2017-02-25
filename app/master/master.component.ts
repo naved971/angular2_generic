@@ -17,4 +17,7 @@ export class MasterCollection implements OnInit {
     ngOnInit() {
         this.masterData = this.masterService.getMasterCollection();
     }
+    addToCollection(item:MasterCollectionInfo){
+        this.masterService.setCollectionInfo(item);
+    }
 }
