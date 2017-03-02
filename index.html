@@ -12,6 +12,15 @@
  </head>
 
 <body>
+
+<script>
+  window.onerror = function(message, url, lineNumber) {
+  //save error and send to server for example.
+  console.log(message,url,lineNumber)
+  return true;
+};
+
+  </script>
     <app-root>Loading</app-root>
 </body>
 

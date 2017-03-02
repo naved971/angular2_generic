@@ -1,0 +1,15 @@
+<div class="container">
+
+
+
+    <input type="number" required class="form-control" #sky="ngModel" [(ngModel)]="hero1"   id="nk" />
+
+        valid : {{sky.valid}} |
+        pristine :{{sky.pristine}} |
+        dirty :{{sky.dirty}} |
+        touch : {{sky.touched}} |
+        untouch : {{sky.untouched}} |
+
+<input type="button" (click)="clickme()" value="CLICK Me "/>
+</div>
+
